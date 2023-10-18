@@ -61,18 +61,15 @@ const newPokemonArray = pokemons.map((pokemon,index )=> {
     someFirePokemonHighExperience
   );
   
-  //Pokemon dizisinde bulunan "Electric" türündeki Pokemon'ların deneyim puanlarının toplamını
+    //Pokemon dizisinde bulunan "Electric" türündeki Pokemon'ların deneyim puanlarının toplamını
   // kullanarak hesaplamak istiyorsunuz.
-
-  //???????
   
+  const totalElectricExperience = pokemons.filter(pokemon=>pokemon.type=="Electric").reduce((total, pokemon)=> total+pokemon.experience,0)
   console.log(
     "Electric türündeki Pokemon'ların toplam deneyim puanı: " +
       totalElectricExperience
   );
   
   //Pokemon dizisinde, her türdeki Pokemon'ların deneyim puanlarının ortalamasını hesaplamak istiyorsunuz.
+  const typeExperienceAverages= pokemons.reduce((total, pokemon)=> total+pokemon.experience,0) / pokemons.length
   console.log(typeExperienceAverages);
-
-  //???
-
